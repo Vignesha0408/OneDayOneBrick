@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 bool isprime(int n)
 {
 	for(int i=2;i<n;i++)
@@ -6,14 +6,8 @@ bool isprime(int n)
 			return false;
 		return true;
 }
-void  main() {
-    
+void  main() {  
     for(int i=2;i<=10;i++)
 		if(isprime(i))
 			printf("%d ",i);
 }
-/*
-C:>cc print_prime.c
-C:>a
-2 3 5 7
-*/
