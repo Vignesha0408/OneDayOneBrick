@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    <h1>array constructor is declared as ()</h1>
+    <p id="id1"></p>
+    <marquee width=500 height= 60 id="id2"> ></marquee>
+    <script>
+        let a=new Array(1,2,1,5)
+        var doc=document.getElementById("id1")
+        for(let i=0;i<a.length;i++)
+            doc.textContent=doc.textContent+a[i]+" ";
+
+        function TOstring(a)
+        {
+            return document.getElementById("id2").innerHTML=a.toString()
+        }
+        TOstring(a)
+    </script>
+</body>
+</html>

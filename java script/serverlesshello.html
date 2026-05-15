@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+
+<div id="contents"></div>
+
+<script>
+    
+ReactDOM.render(
+    React.createElement('div', {title: 'Outer div'},React.createElement('h1', null, 'Hello')),
+    document.getElementById('contents')
+    );
+</script>
+
+
+</body>
+</html>
