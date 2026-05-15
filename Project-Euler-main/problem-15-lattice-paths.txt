@@ -1,0 +1,18 @@
+** start of script.js **
+
+function factorial(n)
+{
+  let ans=1;
+  for(let i=1;i<=n;i++)
+    ans*=i;
+  return ans;
+}
+function latticePaths(n) {
+  n=n+n
+  return factorial(n)/(factorial(n/2)*factorial(n/2));
+}
+
+latticePaths(4);
+
+** end of script.js **
+

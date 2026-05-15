@@ -1,0 +1,81 @@
+** start of script.js **
+
+const data = {
+  limit: 1000,
+  ones: {0:"",1:"one",2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine"},
+  teens: {0:"",11:"eleven",12:"twelve",13:"thirteen",14:"fourteen",15:"fifteen",16:"sixteen",17:"seventeen",18:"eighteen",19:"nineteen"},
+  tens: {0:"",10:"ten",20:"twenty",30:"thirty",40:"forty",50:"fifty",60:"sixty",70:"seventy",80:"eighty",90:"ninety"}};
+
+var n,n1,count=0,str,s1,s2,s3;
+
+
+function intTostr(n)
+{
+    
+n1=n
+
+while(0<n1)
+{
+    n1=Math.floor(n1/10)
+    count++
+}
+
+
+if(count==1)
+    {str=data.ones[n]
+        count=0
+    }
+ else if(count==2)
+ {
+    n1=n;
+    s1=n1%10;n1=Math.floor(n1/10)
+    s2=n1%10;n1=Math.floor(n1/10)
+    if(s1==0)
+        str=data.tens[s2*10]
+    else if(s2==1)
+        str=data.teens[s2*10+s1]
+    else
+        str=data.tens[s2*10]+data.ones[s1]
+     count=0
+ }
+
+
+ else if(count==3)
+ {
+        n1=n;
+    s1=n1%10;n1=Math.floor(n1/10)
+    s2=n1%10;n1=Math.floor(n1/10)
+    s3=n1%10;n1=Math.floor(n1/10)
+    if(s1==0 && s2==0)
+        str=data.ones[s3]+"hundred"
+    else if(s1==0&&s2!=0)
+        str=data.ones[s3]+"hundredand"+data.tens[s2*10]
+    else if(s2==0 && s1!=0)
+        str=data.ones[s3]+"hundredand"+data.ones[s1]
+    else if((s2*10+s1)<20)
+        str=data.ones[s3]+"hundredand"+data.teens[s2*10+s1]
+    else
+        str=data.ones[s3]+"hundredand"+data.tens[s2*10]+data.ones[s1]
+     count=0
+ }
+
+
+ else if(count==4)
+    str="onethousand"
+
+ return str;
+}
+
+
+function numberLetterCounts(n){
+let sum=0;
+for(let i=1;i<=n;i++)
+    sum=sum+intTostr(i).length
+return sum
+}
+
+
+numberLetterCounts(n)
+
+** end of script.js **
+

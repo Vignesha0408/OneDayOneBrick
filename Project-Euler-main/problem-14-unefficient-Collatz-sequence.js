@@ -1,0 +1,33 @@
+function nodecount(n)
+{
+  let d=1;
+  while(n!==1)
+  {
+    if(n%2===0)
+        n/=2    
+        
+    else 
+        n=3*n+1
+        d++;    
+  }
+  return d;
+}
+
+function longestCollatzSequence(n) {
+  let max=0,ref;
+  for(let i=1;i<=n;i++)
+    {
+        ref=nodecount(i);
+        if(max<ref)
+            {
+                max=ref;
+                max_no=i;
+            }
+    }
+  
+  return max_no;
+}
+
+
+ 
+console.log(longestCollatzSequence(1000000));

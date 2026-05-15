@@ -1,0 +1,35 @@
+** start of script.js **
+
+function devisors(n) { 
+  let count = 2; 
+  for(let i=2;i<Math.sqrt(n);i++) 
+    if(n%i===0) 
+      if(i === n / i)
+          count += 1;
+      else
+          count += 2;
+
+  return count;
+   }
+function nth_triangular(n)
+{
+  let ans=0;
+  for(let i=1;i<=n;i++)
+      ans+=i;
+  return ans;
+}
+
+function divisibleTriangleNumber(n) {
+  let count=1;
+  while(true)
+  {
+    if(devisors(nth_triangular(count))>n)
+        return nth_triangular(count);
+    count++;
+  } 
+}
+
+divisibleTriangleNumber(500);
+
+** end of script.js **
+

@@ -1,0 +1,26 @@
+** start of script.js **
+
+function sumofdigits(n)
+{
+  let ans=0n,d
+  while(n>0n)
+  {
+      d=n%10n
+      ans+=d;
+      n=n/10n
+  }
+  return ans;
+}
+
+function powerDigitSum(n) 
+{
+  let ans=1n
+  for(let i=1;i<=n;i++)
+    ans*=2n
+  return Number(sumofdigits(ans));
+} 
+
+powerDigitSum(15);
+
+** end of script.js **
+
