@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Calculator</title>
+	<style>
+		 .calculator{
+			text-align:center;
+		 }
+		 #clr1{
+			width:28px;height:23px;
+		 }
+		#textbox1{
+			width:60px;height:23px;
+		}
+
+	</style>
+	<script>
+		function addnum(n)
+		{
+			document.getElementById("textbox1").value+=n;
+		}
+	</script>
+	
+</head>
+<body bgcolor="pink">
+	<h1>Addition Calculator</h1>
+<div class="calculator">
+	<input type="text" id="textbox1" >
+	<button id="clr1" onclick="document.getElementById('textbox1').value = ''">clr</button>
+	 
+	<br><br>
+	<button onclick="addnum(1)">1</button>
+	<button onclick="addnum(2)">2</button>
+	<button onclick="addnum(3)">3</button>
+	<br><br>
+	<button onclick="addnum(4)">4</button>
+	<button onclick="addnum(5)">5</button>
+	<button onclick="addnum(6)">6</button>
+	<br><br>
+	<button onclick="addnum(7)">7</button>
+	<button onclick="addnum(8)">8</button>
+	<button onclick="addnum(9)">9</button>
+	<br><br>
+	<button onclick="addnum(0)">0</button>
+	<button onclick="addnum('+')">+</button>
+	<button onclick="document.getElementById('textbox1').value=eval(document.getElementById('textbox1').value)">=</button>
+	<br><br>
+</div>
+</body>
+
+</html>
